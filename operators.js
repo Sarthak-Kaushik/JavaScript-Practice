@@ -56,3 +56,7 @@ console.log("cond1 || cond3 =",cond1 || cond3);      // || Logical OR
 console.log("cond1 || cond3 =",cond3 || cond3);      
 console.log("!cond1 =",!cond1);                      // ! Logical NOT
 
+let ages = 25;
+let result = ages >=18 ? "Adult" : "Not adult";
+console.log("result =", result);                     // Ternary Operator
+

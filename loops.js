@@ -52,3 +52,27 @@
 // }
 // while(i<=5)
 // alert("The sum is " + sum + " and i is " + i + "");
+
+// for of loop
+
+// let str = "Sarthak";
+// let size = 0;
+// for(let i of str)
+// {
+//     size++;
+//     console.log("i = " + i + "");
+// }
+// console.log("size = " + size + "");
+
+// for in loop
+
+let student = 
+{
+    name: "Sarthak",
+    age: 20, 
+    course: "B.Tech"
+};
+for (let key in student)
+{
+    console.log("key =", key, "value =", student[key]);
+}

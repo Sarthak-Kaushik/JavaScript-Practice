@@ -1,0 +1,1 @@
+//Q1) For a given array of numbers, print the square of each value  using forEach() method.

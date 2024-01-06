@@ -28,21 +28,21 @@
 
 
 
-let n = prompt("Enter a number to find Sum and Product of all till that number: ");
-let arr = [];
-for(let i =1; i <= n; i++)
-{
-    arr.push(i);
-}
+// let n = prompt("Enter a number to find Sum and Product of all till that number: ");
+// let arr = [];
+// for(let i =1; i <= n; i++)
+// {
+//     arr.push(i);
+// }
 
-let sum = arr.reduce((res, cur)=>
-{
-    return res + cur;
-});
-console.log(`The sum of all numbers till ${n} is ${sum}`);
+// let sum = arr.reduce((res, cur)=>
+// {
+//     return res + cur;
+// });
+// console.log(`The sum of all numbers till ${n} is ${sum}`);
 
-let product = arr.reduce((res, cur) =>
-{
-    return res * cur;
-});
-console.log(`The product off all numbers till ${n} is ${product}`);
+// let product = arr.reduce((res, cur) =>
+// {
+//     return res * cur;
+// });
+// console.log(`The product off all numbers till ${n} is ${product}`);

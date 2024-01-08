@@ -39,9 +39,16 @@
 // 3. innerHTML
 
 
-let div = document.querySelector("div");
-console.dir(div.innerHTML);
+// let div = document.querySelector("div");
+// console.dir(div.innerHTML);
 
-let elements4 = document.querySelector("h3");
-console.dir(elements4);
-elements4.innerHTML = "<i>I am a new heading</i>";
+// let elements4 = document.querySelector("h3");
+// console.dir(elements4);
+// elements4.innerHTML = "<i>I am a new heading</i>";
+
+
+
+// 4. textContent
+
+// let elements5 = document.querySelector("h1");
+// console.dir(elements5.textContent);

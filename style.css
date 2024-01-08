@@ -3,7 +3,7 @@
     color : blue;
 } */
 
-body {
+/* body {
     background-color: pink;
 }
 
@@ -21,4 +21,13 @@ button {
 .heading {
     background-color: yellow;
     color: blue;
+} */
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    border: 1px solid black;
+    text-align: center;
+    margin-bottom: 5px;
 }

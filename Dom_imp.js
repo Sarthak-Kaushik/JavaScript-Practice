@@ -42,7 +42,7 @@
 // let div = document.querySelector("div");
 // console.dir(div.innerHTML);
 
-// let elements4 = document.querySelector("h3");
+// let elements4 = d/ocument.querySelector("h3");
 // console.dir(elements4);
 // elements4.innerHTML = "<i>I am a new heading</i>";
 
@@ -52,3 +52,14 @@
 
 // let elements5 = document.querySelector("h1");
 // console.dir(elements5.textContent);
+
+
+//5.`syp7 Attribute
+
+let parah = document.querySelector("p");
+console.log(parah.getAttribute("id"));
+console.log(parah.setAttribute("id", "newId"));
+console.log(parah);
+
+
+//6. STYLE

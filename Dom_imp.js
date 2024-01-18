@@ -73,6 +73,10 @@ div.style.fontSize = "20px";
 
 let newBtn = document.createElement("button");
 newBtn.innerText = "Click me please!";
+newBtn.style.marginBottom = "10px";
 
 let div2 = document.querySelector("div");
-div.append(newBtn);
+// div.append(newBtn);
+// div.prepend(newBtn);
+// div.before(newBtn);
+   div.after(newBtn);

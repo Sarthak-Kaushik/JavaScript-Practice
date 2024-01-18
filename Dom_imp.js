@@ -74,9 +74,16 @@ div.style.fontSize = "20px";
 let newBtn = document.createElement("button");
 newBtn.innerText = "Click me please!";
 newBtn.style.marginBottom = "10px";
+newBtn.style.backgroundColor = "Blue";
+newBtn.style.color = "white";
+newBtn.style.width = "100px";
+newBtn.style.height = "50px";
 
 let div2 = document.querySelector("div");
 // div.append(newBtn);
 // div.prepend(newBtn);
 // div.before(newBtn);
    div.after(newBtn);
+
+
+//8. REMOVE ELEMENTS

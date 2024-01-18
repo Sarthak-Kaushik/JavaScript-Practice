@@ -54,12 +54,12 @@
 // console.dir(elements5.textContent);
 
 
-//5.`syp7 Attribute
+//5. Attribute
 
-let parah = document.querySelector("p");
-console.log(parah.getAttribute("id"));
-console.log(parah.setAttribute("id", "newId"));
-console.log(parah);
+// let parah = document.querySelector("p");
+// console.log(parah.getAttribute("id"));
+// console.log(parah.setAttribute("id", "newId"))
+// console.log(parah);
 
 
 //6. STYLE

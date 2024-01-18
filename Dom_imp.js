@@ -64,10 +64,15 @@
 
 //6. STYLE
 
-// let div = document.querySelector("div");
-// div.style.backgroundColor = "red";
-// div.style.color = "yellow";
-// div.style.fontSize = "20px";
+let div = document.querySelector("div");
+div.style.backgroundColor = "red";
+div.style.color = "yellow";
+div.style.fontSize = "20px";
 
 //7. INSERT ELEMENTS   
 
+let newBtn = document.createElement("button");
+newBtn.innerText = "Click me please!";
+
+let div2 = document.querySelector("div");
+div.append(newBtn);

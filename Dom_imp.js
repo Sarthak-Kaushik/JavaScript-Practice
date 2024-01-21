@@ -64,29 +64,29 @@
 
 //6. STYLE
 
-let div = document.querySelector("div");
-div.style.backgroundColor = "red";
-div.style.color = "yellow";
-div.style.fontSize = "20px";
+// let div = document.querySelector("div");
+// div.style.backgroundColor = "red";
+// div.style.color = "yellow";
+// div.style.fontSize = "20px";
 
 //7. INSERT ELEMENTS   
 
-let newBtn = document.createElement("button");
-newBtn.innerText = "Click me please!";
-newBtn.style.marginBottom = "10px";
-newBtn.style.backgroundColor = "Blue";
-newBtn.style.color = "white";
-newBtn.style.width = "100px";
-newBtn.style.height = "50px";
+// let newBtn = document.createElement("button");
+// newBtn.innerText = "Click me please!";
+// newBtn.style.marginBottom = "10px";
+// newBtn.style.backgroundColor = "Blue";
+// newBtn.style.color = "white";
+// newBtn.style.width = "100px";
+// newBtn.style.height = "50px";
 
-let div2 = document.querySelector("div");
+// let div2 = document.querySelector("div");
 // div.append(newBtn);
 // div.prepend(newBtn);
 // div.before(newBtn);
-   div.after(newBtn);
+   // div.after(newBtn);
 
 
 //8. REMOVE ELEMENTS
 
-let para = document.querySelector("p");
-para.remove();
+// let para = document.querySelector("p");
+// para.remove();

@@ -87,3 +87,6 @@ let div2 = document.querySelector("div");
 
 
 //8. REMOVE ELEMENTS
+
+let para = document.querySelector("p");
+para.remove();

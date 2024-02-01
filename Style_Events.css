@@ -1,6 +1,8 @@
 #div1{
     width: 100px;
     height: 100px;
-    background-color: dodgerblue;
-    border: 1px solid black;
+    background-color: black;
+    color: white;
+    border: 5px solid dodgerblue;
+    margin-top: 10px;
 }

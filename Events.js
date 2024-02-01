@@ -5,3 +5,23 @@ btn1.onclick = () => {
     a++;
     console.log(a); //26
 }
+
+let box = document.querySelector("#div1");
+box.onmouseover = () => {
+    console.log("Box is being hovered over");
+    box.style.width = "100px";
+    box.style.height = "100px";
+    box.style.backgroundColor = "dodgerblue";
+    box.style.color = "black";
+    box.style.border = "5px solid black";
+    box.style.marginTop = "10px";
+}
+
+box.onmouseout = () => {
+    box.style.width = "100px";
+    box.style.height = "100px";
+    box.style.backgroundColor = "black";
+    box.style.color = "white";
+    box.style.border = "5px solid dodgerblue";
+    box.style.marginTop = "10px";
+}

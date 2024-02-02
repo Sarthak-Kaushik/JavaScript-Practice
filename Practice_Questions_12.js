@@ -1,4 +1,4 @@
-//Q1 Create a toggle button taha changes the screen  to dark - mode when clicked and light - mode when clicked again.
+//Q1 Create a toggle button to change the screen to dark-mode when clicked and light-mode when clicked again.
 let curMode = document.querySelector("#mode");
 let body = document.querySelector("body");
 let mode = "light";

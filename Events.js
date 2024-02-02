@@ -1,10 +1,18 @@
 let btn1 = document.getElementById("btn1");
-btn1.onclick = () => {
-    console.log("Button 1 was clicked");
-    let a = 25;
-    a++;
-    console.log(a); //26
-}
+// btn1.onclick = () => {
+//     console.log("Button 1 was clicked");
+//     let a = 25;
+//     a++;
+//     console.log(a); //26
+// }
+
+btn1.addEventListener("click", () => {
+    console.log("Event 1 was fired");
+});
+
+btn1.addEventListener("click", () => {
+    console.log("Event 2 was fired");
+});
 
 let box = document.querySelector("#div1");
 box.onmouseover = () => {

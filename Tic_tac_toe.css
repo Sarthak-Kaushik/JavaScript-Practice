@@ -36,16 +36,40 @@ body{
     box-shadow: 0 0 1rem rgba(0,0,0,0.5);
     font-size: 50px;
     color: red;
+    background-color: #dddd0e;
     /* border: 2px solid red; */
 }
 
 #reset{
-    width: 30vmin;
-    height: 5vmin;
+    /* width: 30vmin;
+    height: 5vmin; */
     border-radius: 1rem;
     border: none;
+    padding: 1rem;
     box-shadow: 0 0 1rem rgba(0,0,0,0.5);
     background-color: #087E8B;
     color: white;
+    font-size: 1.25rem;
 
+}
+
+#new-btn{
+    border-radius: 1rem;
+    border: none;
+    padding: 1rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+    background-color: #087E8B;
+    color: white;
+    font-size: 1.25rem;
+    margin-top: 5vmin;
+}
+
+#msg{
+    color: #e9e90a;
+    font-size: 8vmin;
+}
+
+.msg-container{
+    height: 30vmin;
+    display: none;
 }

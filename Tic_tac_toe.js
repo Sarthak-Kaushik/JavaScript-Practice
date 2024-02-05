@@ -29,6 +29,12 @@ boxes.forEach((box) => {
 
 });
 
+const showWinner = (winner) => {
+
+
+
+};
+
 checkWinner = () => {
     for(let patterns of winPatterns)
     {
@@ -40,13 +46,14 @@ checkWinner = () => {
         {
             if(pos1Val == pos2Val && pos2Val == pos3Val)
             {
-               if(pos1Val == 'O')
-               {
-                msg.innerText = 'Player 1 is the Winner';
-               }
-               else {
-                msg.innerText = 'Player 2 is the Winner';
-               }
+            //    if(pos1Val == 'O')
+            //    {
+            //     msg.innerText = 'Player 1 is the Winner';
+            //    }
+            //    else {
+            //     msg.innerText = 'Player 2 is the Winner';
+            //    }
+            showWinner(pos1Val);
             }
         }
     }

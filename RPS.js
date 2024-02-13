@@ -15,7 +15,7 @@ const genCompChoice = () => {
 };
 
 const playGame = (userChoice) => {
-    console.log("User's Choice will be, ", userChoice);
+    console.log("User's Choice will be,",userChoice);
     // Generate Computer's Choice  --> Modular Programming
 };
 

@@ -10,19 +10,53 @@ const choices = document.querySelectorAll(".choice");
 const genCompChoice = () => {
     const options = ["rock", "paper", "scissors"];
     // Rock, Paper, Scissors
-    const randomIndex = Math.floor(Math.random() * 3);
+    const randomIdx = Math.floor(Math.random() * 3);
+    return options[randomIdx];
 
 };
 
+const drawGame = () => {
+    console.log("Draw Game");
+};
 const playGame = (userChoice) => {
-    console.log("User's Choice will be,",userChoice);
+    console.log("User's Choice =",userChoice);
     // Generate Computer's Choice  --> Modular Programming
+    const compChoice = genCompChoice();
+    console.log("Computer's Choice =",compChoice);
+
+    const showWinner = (userWin) => {
+    }
+
+    if(userChoice === compChoice)
+    {
+        // Draw Game
+        drawGame();
+    } else {                             // If The condition is not Draw, then we have to check who wins
+        let userWin = true;
+        if(userChoice === "rock")
+        {
+            // Two options for computer now => Scissors, paper
+            userWin = compChoice === "paper" ? false : true;
+        }
+
+        else if(userChoice === "paper")
+        {
+            // Two options for computer now => Rock, Scissors
+            userWin = compChoice === "rock" ? true : false;
+        }
+
+        else
+        {
+            // Two options for computer now => Rock, Paper
+            userWin = compChoice === "rock" ? false : true;
+        }
+        showWinner(userWin);
+    }
 };
 
 choices.forEach((choice) => {
     choice.addEventListener("click", () => {
         const userChoice = choice.getAttribute("id");
-        console.log("Choice was clicked", userChoice);
         playGame(userChoice);
 
     })

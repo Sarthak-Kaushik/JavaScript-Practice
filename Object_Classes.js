@@ -62,36 +62,78 @@
 // obj.hello();
 
 
+// class Person {
+//     constructor()  {
+//         this.species = "Homo - Sapiens";
+//     }
+//     eat() {
+//         console.log("Eat");
+//     }
+
+//     sleep() {
+//         console.log("Sleep");
+//     }
+
+//     work() {
+//         console.log("do nothing");
+//     }
+// }
+// class Engineer extends Person{
+//     work() {
+//         console.log("solve problem, build something");
+//     }
+// }
+// let sarthak = new Engineer();
+// sarthak.eat();
+// sarthak.sleep();
+// sarthak.work();
+
+// class Doctor extends Person{
+//     work() {
+//         console.log("Treat patients");
+//     }
+// }
+
+// let kanika = new Doctor();
+// kanika.eat();
+// kanika.sleep();
+// kanika.work();
+
+
+// SUPER KEYWORD
+
 class Person {
+    constructor(name) {
+        this.name = name;
+        this.species = "Homo-Sapiens";
+    }
+
+    jaat() {
+        return 'Hi, my name is ' + this.name;
+    }
+
     eat() {
-        console.log("Eat");
+        return 'eat';
     }
 
     sleep() {
-        console.log("Sleep");
-    }
-
-    work() {
-        console.log("do nothing");
-    }
-}
-class Engineer extends Person{
-    work() {
-        console.log("solve problem, build something");
-    }
-}
-let sarthak = new Engineer();
-sarthak.eat();
-sarthak.sleep();
-sarthak.work();
-
-class Doctor extends Person{
-    work() {
-        console.log("Treat patients");
+        return 'sleep';
     }
 }
 
-let kanika = new Doctor();
-kanika.eat();
-kanika.sleep();
-kanika.work();
+class Engineer extends Person {
+    constructor(name) {
+        super(name);
+    }
+    work() {
+        return'solve problems, build something.';
+    }
+    show() {
+        // return super.jaat() + 'I am an Engineer, my work is ' + this.work() + 'I ' + super.eat() + ' & ' + super.sleep();
+         console.log(`${super.jaat()} I am an Engineer, my work is ${this.work()} I ${super.eat()} & ${super.sleep()}`);
+    }
+}
+
+let obj = new Engineer("Sarthak");
+// console.log(`${obj.show()}`);
+obj.show();

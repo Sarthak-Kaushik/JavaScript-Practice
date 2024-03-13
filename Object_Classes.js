@@ -135,5 +135,5 @@ class Engineer extends Person {
 }
 
 let obj = new Engineer("Sarthak");
-// console.log(`${obj.show()}`);
-obj.show();
+// console.log(`${obj.show()}`);              // This is used when return statement is used in show() method;
+obj.show();                                   // This is used when console.log is used in the show() method;

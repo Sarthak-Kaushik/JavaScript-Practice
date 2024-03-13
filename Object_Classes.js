@@ -109,7 +109,7 @@ class Person {
     }
 
     jaat() {
-        return 'Hi, my name is ' + this.name;
+        return 'Hi, my name is ' + this.name + ', I am a ' + this.species + '.';
     }
 
     eat() {
@@ -126,11 +126,11 @@ class Engineer extends Person {
         super(name);
     }
     work() {
-        return'solve problems, build something.';
+        return'solve problems & build something.';
     }
     show() {
         // return super.jaat() + 'I am an Engineer, my work is ' + this.work() + 'I ' + super.eat() + ' & ' + super.sleep();
-         console.log(`${super.jaat()} I am an Engineer, my work is ${this.work()} I ${super.eat()} & ${super.sleep()}`);
+         console.log(`${super.jaat()} I am an Engineer by profession, my work is ${this.work()} I ${this.eat()} & ${this.sleep()}`);
     }
 }
 

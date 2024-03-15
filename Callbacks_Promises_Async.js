@@ -3,6 +3,8 @@
  // }
  // setTimeout(hello, 4000);
 
+const { get } = require("prompt");
+
 
 // console.log("One");
 // console.log("Two");
@@ -21,12 +23,23 @@
 //     sumCallback(a, b);
 // }
 
-// calculator(10, 5, sum);      // 15
+// calculator(10, 5, sum);      // 15       // SYNCHHROUNOUS CALLBACKS
 
-const hello = () => {
-    console.log("Hello World");
+// const hello = () => {
+//     console.log("Hello World");
+// }
+
+// setTimeout(hello, 3000);
+
+// console.log("Kaise hai aap sab");          // ASYNCHRONOUS CALLBACKS
+
+// CALLBACK HELL
+
+function getData(dataId) {
+    setTimeout(() => {
+        console.log("Data:", dataId)
+    }, 2000);
 }
-
-setTimeout(hello, 3000);
-
-console.log("Kaise hai aap sab");
+getData(10);
+getData(20);
+getData(30);

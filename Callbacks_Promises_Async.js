@@ -34,11 +34,18 @@
 
 // CALLBACK HELL
 
-function getData(dataId) {
+function getData(dataId, getNextData) {    // CALLBACK HELL`
     setTimeout(() => {
-        console.log("Data:", dataId)
+        console.log("Data:", dataId);
+        if (getNextData)  {
+            getNextData();
+        }
     }, 2000);
 }
-getData(10);
-getData(20);
-getData(30);
+getData(10, () => {
+    getData(20, () => {
+        getData(30, () => {
+            getData(40);
+        });
+    }
+)});

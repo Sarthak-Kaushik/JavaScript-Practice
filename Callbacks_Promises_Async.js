@@ -3,7 +3,6 @@
  // }
  // setTimeout(hello, 4000);
 
-const { get } = require("prompt");
 
 
 // console.log("One");

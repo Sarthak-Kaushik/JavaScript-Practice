@@ -34,18 +34,28 @@
 
 // CALLBACK HELL
 
-function getData(dataId, getNextData) {    // CALLBACK HELL
-    setTimeout(() => {
-        console.log("Data:", dataId);
-        if (getNextData)  {
-            getNextData();
-        }
-    }, 2000);
-}
-getData(10, () => {
-    getData(20, () => {
-        getData(30, () => {
-            getData(40);
-        });
-    });
-});
+// function getData(dataId, getNextData) {    // CALLBACK HELL
+//     setTimeout(() => {
+//         console.log("Data:", dataId);
+//         if (getNextData)  {
+//             getNextData();
+//         }
+//     }, 2000);
+// }
+// getData(10, () => {
+//     getData(20, () => {
+//         getData(30, () => {
+//             getData(40);
+//         });
+//     });
+// });
+
+
+//  Promises
+
+ const promise = new Promise((resolve, reject) => {
+    console.log("This is a promise");
+    resolve(123);
+    reject("Error");
+ });
+ console.log(promise);

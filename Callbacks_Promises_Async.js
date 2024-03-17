@@ -34,7 +34,7 @@
 
 // CALLBACK HELL
 
-function getData(dataId, getNextData) {    // CALLBACK HELL`
+function getData(dataId, getNextData) {    // CALLBACK HELL
     setTimeout(() => {
         console.log("Data:", dataId);
         if (getNextData)  {
@@ -47,5 +47,5 @@ getData(10, () => {
         getData(30, () => {
             getData(40);
         });
-    }
-)});
+    });
+});

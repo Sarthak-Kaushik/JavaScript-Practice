@@ -53,9 +53,9 @@
 
 //  Promises
 
- const promise = new Promise((resolve, reject) => {
+ let promise = new Promise((resolve, reject) => {
     console.log("This is a promise");
-    resolve(123);
-    reject("Error");
+   //  resolve(123);
+    reject("Error has occured");
  });
  console.log(promise);

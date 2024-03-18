@@ -63,16 +63,34 @@
 
 
 
-function getData(dataId, getNextData) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log("Data:", dataId);
-      resolve("Success");
-      if(getNextData) {
-        getNextData();
-      }
-    }, 5000);
-  });
-}
+// function getData(dataId, getNextData) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Data:", dataId);
+//       resolve("Success");
+//       reject("Error has occured");
+//       if(getNextData) {
+//         getNextData();
+//       }
+//     }, 5000);
+//   });
+// }
 
-let promise = new getData(20);
+// let promise = new getData(20);
+
+ const getPromise = () => {
+  return new Promise((resolve, reject) => {
+    console.log("This is a promise");
+    resolve("Success");
+    reject("Error has occured");
+  });
+ };
+
+ let promise = getPromise();
+ promise.then((res) => {
+    console.log("Resolve Fullfilled:", res);
+ });
+
+ promise.catch((err) => {
+    console.log("Reject Fullfilled:", err);
+ });

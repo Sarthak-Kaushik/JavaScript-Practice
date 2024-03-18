@@ -54,9 +54,25 @@
 
 //  Promises
 
- let promise = new Promise((resolve, reject) => {
-    console.log("This is a promise");
-    resolve(123);
-   // reject("Error has occured");
- });
- console.log(promise);
+//  let promise = new Promise((resolve, reject) => {
+//     console.log("This is a promise");
+//     resolv("Success");
+//     reject("Error has occured");
+//  });
+//  console.log(promise);
+
+
+
+function getData(dataId, getNextData) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Data:", dataId);
+      resolve("Success");
+      if(getNextData) {
+        getNextData();
+      }
+    }, 5000);
+  });
+}
+
+let promise = new getData(20);

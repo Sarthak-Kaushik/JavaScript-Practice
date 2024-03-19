@@ -78,19 +78,46 @@
 
 // let promise = new getData(20);
 
- const getPromise = () => {
-  return new Promise((resolve, reject) => {
-    console.log("This is a promise");
-    resolve("Success");
-    reject("Error has occured");
-  });
- };
+//  const getPromise = () => {
+//   return new Promise((resolve, reject) => {
+//     console.log("This is a promise");
+//     resolve("Success");
+//     reject("Error has occured");
+//   });
+//  };
 
- let promise = getPromise();
- promise.then((res) => {
-    console.log("Resolve Fullfilled:", res);
- });
+//  let promise = getPromise();
+//  promise.then((res) => {
+//     console.log("Resolve Fullfilled:", res);
+//  });
 
- promise.catch((err) => {
-    console.log("Reject Fullfilled:", err);
- });
+//  promise.catch((err) => {
+//     console.log("Reject Fullfilled:", err);
+//  });
+
+
+// PROMISE CHAINING
+
+function asyncFunc1() {
+   return new Promise((resolve, reject) => {
+      setTimeout(() => {
+         console.log("Data1");
+         resolve("Success");
+      }, 4000);
+   });
+}
+
+function asyncFunc2() {
+   return new Promise((resolve, reject) => {
+      setTimeout(() => {
+         console.log("Data2");
+         resolve("Success 2");
+      }, 4000);
+   });
+}
+
+console.log("Fetching Data 1...");
+asyncFunc1().then((res) => {
+   console.log("Fetching Data 2...");
+   asyncFunc2().then((res) => {});
+});

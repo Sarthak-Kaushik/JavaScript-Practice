@@ -48,5 +48,3 @@
 // This is callbacks, its use is that we can pass a function as an argument to another function.
 // This is used in asyncronous programming. We can pass multiple functions as arguments to another function.
 // An example is written above. We can pass multiple functions as arguments to the calculator function.
-
-

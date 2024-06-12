@@ -82,7 +82,9 @@
 function getData(dataId, getNextData){
     setTimeout(() => {
         console.log("Data =", dataId);
-        getNextData();
+        if(getNextData) {
+            getNextData();
+        }
     }, 2000);
 }
 

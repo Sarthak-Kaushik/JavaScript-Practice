@@ -103,18 +103,26 @@
                                                           // Promises
 
 
-function getData(dataId, getNextData){                  // getData function is created
-    return new Promise((resolve, reject) => {    // Creates a function PROMISE 
-        setTimeout(() => {
-            console.log("Data :", dataId);
-            resolve("Success");                         // If RESOLVE occurs
-            reject("Error has occured");                // If REJECT occurs
-            if(getNextData){
-                getNextData();
-            }
-        }, 5000);                                       // 5 Second Delay
-    });
-}
+// function getData(dataId, getNextData){                  // getData function is created
+//     return new Promise((resolve, reject) => {    // Creates a function PROMISE 
+//         setTimeout(() => {
+//             console.log("Data :", dataId);
+//             resolve("Success");                         // If RESOLVE occurs
+//             reject("Error has occured");                // If REJECT occurs
+//             if(getNextData){
+//                 getNextData();
+//             }
+//         }, 5000);                                       // 5 Second Delay
+//     });
+// }
+// let result = new getData(10);                          // Creating an object "RESULT" and storing the value of getData() in it.
+
+// let result = 0;
+// for(let i = 10; i<=40; i+=10){
+//     result = new getData(i);
+// }
 
 
-let result = new getData(10);                          // Creating an object "RESULT" and storing the value of getData() in it.
+                                                       // using THEN and CATCH
+
+

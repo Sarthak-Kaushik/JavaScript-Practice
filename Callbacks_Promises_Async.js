@@ -89,8 +89,11 @@ function getData(dataId, getNextData){
 }
 
 getData(10, () => {
+    console.log("Getting data set 2...");
     getData(20, () => {
+        console.log("Getting data set 3...");
         getData(30, () => {
+            console.log("Getting data set 4...");
             getData(40);
         });
     });

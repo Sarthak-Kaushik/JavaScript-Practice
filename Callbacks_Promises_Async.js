@@ -189,8 +189,35 @@
                                                     // using CHAINING THEN & CATCH method with getData() EXAMMPLE.
 
 
+// let getData = (dataId) => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Data :", dataId);
+//             resolve("Success");
+//         }, 2000);
+//     });
+// };
+
+// getData(10)                                     // calling getData(10).
+// .then(() => {                                   // if getdata(10) is successfully executed, then
+//     return getData(20);                         // call getData(20) and return whatever happens i.e, if it is successful then,
+// })                                              // execute the next "THEN" and return getData(30) IF failed then return error.
+// .then(() => {                                   // if getData(20) is successfully executed, then
+//     return getData(30);                         // call getData(30) and return whatever happens i.e., if it is successful then,
+// })                                              // execute the next "THEN" and return getData(40) IF failed then return error.
+// .then(() => {                                   // if getData(30) is successfully executed, then
+//     return getData(40);                         // call getData(40) and return whatever happens i.e., if it is successful then,
+// })                                              // execute the next "THEN" and return getData(40) IF failed then return error.
+// .then((res) => {
+//     console.log(res);
+// });
+
+
+                                                    // ASYNC AWAIT with getData() Example
+
+
 let getData = (dataId) => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         setTimeout(() => {
             console.log("Data :", dataId);
             resolve("Success");
@@ -198,16 +225,37 @@ let getData = (dataId) => {
     });
 };
 
-getData(10)                                     // calling getData(10).
-.then(() => {                                   // if getdata(10) is successfully executed, then
-    return getData(20);                         // call getData(20) and return whatever happens i.e, if it is successful then,
-})                                              // execute the next "THEN" and return getData(30) IF failed then return error.
-.then(() => {                                   // if getData(20) is successfully executed, then
-    return getData(30);                         // call getData(30) and return whatever happens i.e., if it is successful then,
-})                                              // execute the next "THEN" and return getData(40) IF failed then return error.
-.then(() => {                                   // if getData(30) is successfully executed, then
-    return getData(40);                         // call getData(40) and return whatever happens i.e., if it is successful then,
-})                                              // execute the next "THEN" and return getData(40) IF failed then return error.
-.then((res) => {
-    console.log(res);
-});
+// One way of Using Async - Await is....
+async function getAllData() {
+    console.log("Fetching data 1...");
+    await getData(10);
+    console.log("Fetching data 2...");
+    await getData(20);
+    console.log("Fetching data 3...");
+    await getData(30);
+    console.log("Fetching data 4...");
+    await getData(40);
+}
+
+// getAllData();
+
+// Another way of Using Aysnc - Await is....
+
+(async function () {
+    console.log("Fetching data 1...");
+    await getData(10);
+    console.log("Fetching data 2...");
+    await getData(20);
+    console.log("Fetching data 3...");
+    await getData(30);
+    console.log("Fetching data 4...");
+    await getData(40);
+})();
+
+// This is called IIFE - Immediately-Invoked Function Expression. Here the async function needs no calling. 
+// The function will be immediately invoked by its own and will be executed here only.
+// Only downfall of this method is that this code cannot be recalled again and will have to manually copy the code if needed anywhere else.
+
+
+// We use Async - Await instead of chaining a Promise or callback hell in most of the scenarios in real life.
+// As in real life the code is very big and complex, Promise Chaining and Callbacks hell will make it even more complex than it needs to be.

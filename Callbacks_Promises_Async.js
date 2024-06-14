@@ -210,4 +210,4 @@ getData(10)                                     // calling getData(10).
 })                                              // execute the next "THEN" and return getData(40) IF failed then return error.
 .then((res) => {
     console.log(res);
-})
+});

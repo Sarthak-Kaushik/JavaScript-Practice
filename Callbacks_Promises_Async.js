@@ -126,19 +126,24 @@
                                                        // using THEN and CATCH
 
 
-let getData = () => {
-    return new Promise((resolve, reject) => {
-        console.log("Data is received");
-        resolve("Success");
-        reject("Error has occured");
-    });
-}
+// let getData = () => {                                  // Creates getData function using ARROW function
+//     return new Promise((resolve, reject) => {          // returns PROMISE function
+//         console.log("Data is received");
+//         resolve("Success");                            // if RESOLVE occures
+//         reject("Error has occured");                   // if REJECT occures
+//     });
+// }
 
-let result = getData();
-result.then((res) => {
-    console.log("Resolve is fullfilled.", res);
-});
+// let result = getData();                                // Callback to getData() function
+// result.then((res) => {                                 // if RESOLVE occures
+//     console.log("Resolve is fullfilled.", res);
+// });
 
-result.catch((err) => {
-    console.log("Reject is fullfilled.", err);
-});
+// result.catch((err) => {                                // else REJECT occures
+//     console.log("Reject is fullfilled.", err);       
+// });
+
+
+                                                    // THEN & CATCH Chaining
+
+

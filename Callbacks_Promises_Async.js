@@ -147,3 +147,40 @@
                                                     // THEN & CATCH Chaining
 
 
+let asyncFunc1 = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Data 1");
+            resolve("Success for resolve 1");
+        }, 4000);
+    });
+};
+
+let asyncFunc2 = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Data 2");
+            resolve("Success for resolve 2");
+        }, 4000);
+    });
+};
+// console.log("Fetching Data 1...");
+// let result = asyncFunc1();
+// result.then((res) => {
+//     console.log(res);
+//     console.log("Fetching Data 2...");
+//     let result2 = asyncFunc2();
+//     result2.then((res) => {
+//         console.log(res);
+//     });
+// });
+
+                                               // OR
+
+console.log("Fetching Data 1...");
+asyncFunc1().then((res) => {
+    setTimeout(() => {
+        console.log("Fetching Data 2...");
+        asyncFunc2().then((res) => {});
+    }, 1000);
+});

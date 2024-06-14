@@ -175,7 +175,7 @@
 //     });
 // });
 
-                                               // OR
+                                                    // OR
 
 // console.log("Fetching Data 1...");
 // asyncFunc1().then((res) => {
@@ -184,3 +184,30 @@
 //         asyncFunc2().then((res) => {});
 //     }, 1000);
 // });
+
+
+                                                    // using CHAINING THEN & CATCH method with getData() EXAMMPLE.
+
+
+let getData = (dataId) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Data :", dataId);
+            resolve("Success");
+        }, 2000);
+    });
+};
+
+getData(10)                                     // calling getData(10).
+.then(() => {                                   // if getdata(10) is successfully executed, then
+    return getData(20);                         // call getData(20) and return whatever happens i.e, if it is successful then,
+})                                              // execute the next "THEN" and return getData(30) IF failed then return error.
+.then(() => {                                   // if getData(20) is successfully executed, then
+    return getData(30);                         // call getData(30) and return whatever happens i.e., if it is successful then,
+})                                              // execute the next "THEN" and return getData(40) IF failed then return error.
+.then(() => {                                   // if getData(30) is successfully executed, then
+    return getData(40);                         // call getData(40) and return whatever happens i.e., if it is successful then,
+})                                              // execute the next "THEN" and return getData(40) IF failed then return error.
+.then((res) => {
+    console.log(res);
+})

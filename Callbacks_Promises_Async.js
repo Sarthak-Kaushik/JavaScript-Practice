@@ -126,3 +126,19 @@
                                                        // using THEN and CATCH
 
 
+let getData = () => {
+    return new Promise((resolve, reject) => {
+        console.log("Data is received");
+        resolve("Success");
+        reject("Error has occured");
+    });
+}
+
+let result = getData();
+result.then((res) => {
+    console.log("Resolve is fullfilled.", res);
+});
+
+result.catch((err) => {
+    console.log("Reject is fullfilled.", err);
+});

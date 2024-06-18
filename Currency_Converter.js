@@ -1,7 +1,10 @@
-const BASE_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies.json";
+// const BASE_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.min.json";
 
 const dropdowns = document.querySelectorAll(".dropdown select");
-const btn = document.querySelector("form button");
+const btn = document.querySelector("button");
+const fromCurr = document.querySelector(".from select");
+const toCurr = document.querySelector(".to select");
+const msg = document.querySelector(".msg");
 
 // for (code in countryList) {
 //     console.log(code, countryList[code]);      // here code is the key and countryList[code] is the value like - 0 : apple, 1 : banana.
@@ -36,14 +39,27 @@ const updateFlag = (element) => {
     img.src = newSrc;
 };
 
-btn.addEventListener("click", (evt) => {
+btn.addEventListener("click", async (evt) => {
     evt.preventDefault();
     let amount = document.querySelector(".amount input");
     let amtVal = amount.value;
     // console.log(amtVal);    
     if (amtVal === "" || amtVal < 1) {
-        amtVal = 1;
+        amtVal = 1;                                         // whe have done this so that no value less tahn 1 or negative value is entered.
         amount.value = 1;
     }
     // console.log(amtVal);
+    // console.log(fromCurr.value.toLowerCase(), toCurr.value.toLowerCase());
+    const URL = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCurr.value.toLowerCase()}.json`;
+     let response = await fetch(URL);
+     let result = await response.json();
+    let data = result[fromCurr.value.toLowerCase()][toCurr.value.toLowerCase()];
+    // Here we are getting the data from the API and then calculating the amount in the required currency.
+    // we did not used The "." operator between "fromCurr" and "toCurr" [] bracketrs because the currency code is in the form of string 
+    // and we cannot use the "." operator on strings.
+    //  console.log(data);
+
+    let finalAmount = Math.round(amtVal * data);
+    msg.innerHTML = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
+    // console.log(finalAmount);
 });

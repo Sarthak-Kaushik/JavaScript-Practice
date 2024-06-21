@@ -18,6 +18,15 @@ let student2 = new User("Rishabh", "rishabh@gmail.com");
 let teacher1 = new User("Ancy thomas", "teacher@gmail.com");
 
 
+console.log(student1); //student1;
+console.log(student2); //student2;
+console.log(teacher1); //teacher1;
+
+student1.viewData();
+// student2.viewData();
+// teacher1.viewData();
+
+
 
 
 

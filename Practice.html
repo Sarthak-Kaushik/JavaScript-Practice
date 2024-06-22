@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practicing HTML</title>
+
+    <style>
+        .navigate a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
 </head>
-<body>
+<body style="background-color: cadetblue;">
     <header>      
     <!-- This is the first container in the HTML file or on the page. -->
         <pre>
@@ -112,21 +120,38 @@
 
     <Center>
 
-        <h2>Anchor Tag</h2>
+        <h2>Anchor Tag Using Figure Tag</h2>
 
     <a href="https://github.com/Sarthak-Kaushik?tab=overview&from=2024-06-01&to=2024-06-13" target="_blank">
+
+        <!-- Using anchor tags to create a link to github with the help of an image created using the figure tag. -->
         
         <figure>
 
-        <img src="kurta pic 3.jpg" width="300px" height="300px" alt="">
+        <img src="kurta pic 3.jpg" width="300px" height="300px" alt="Git hub Link">
 
     </figure>
-    
+
     <figcaption>Git Hub</figcaption>
 
     </a>
 
     </center>
+
+    <center>
+            
+            <h2>Anchor Tag</h2>
+
+        <a href="https://www.linkedin.com/in/sarthak-kaushik-7b1b3b1a0/" target="_blank">
+
+            <img src="kurta pic 3.jpg" alt="Git hub Link" width="300px" height="300px">
+
+        </a>
+
+    </center>
+
+    <!-- This is the difference between figure tag and using anchor tag directly. In the example above, the figure tag makes the entire container clickable in the wnd to end width of the screen whereas the anchor tag makes only the image clickable. Both has their own applications but they cannot be used in each other's place. -->
+
     
 
     </main>
@@ -138,6 +163,96 @@
         <!-- footer is used to show the footer of the page. It is not necessary to use the footer tag but it is a good practice to use it.
         We have used Copyright, Trademark and Registered symbols in the paragraph above. -->
 
+        <nav style="  border: 1px; background-color: green; color: white; padding: 6px;" class="navigate">
+            <a href="https://www.amazon.in/ref=nav_logo" target="_blank">Home</a>  |
+            <a href="https://www.amazon.in/gp/css/order-history?ref_=nav_orders_first" target="_blank"> My Orders</a>  |
+            <a href="https://www.amazon.in/gp/css/homepage.html?ref_=nav_em_ya_0_1_1_37" target="_blank"> My Account</a>
+
+        </nav>
+
+        <hr width="100%" size="5" color="black">
+
+<!-- Here we are creating a NESTED LIST where we are nesting both ordered and unordered list together. This is a good practice to show the hierarchy of the list. -->
+            <ul>
+                <li><b><big>Frontend</big></b></li>
+                <ol>
+                    <li>HTML</li>
+                    <ul>
+                        <li>HTML5</li>
+                    </ul>
+                    <li>CSS</li>
+                    <ul>
+                        <li>CSS3</li>
+                    </ul>
+                    <li>JavaScript</li>
+                    <ul>
+                        <li>Vanila JS</li>
+                    </ul>
+                </ol>
+                <li><b><big>Backend</big></b></li>
+                <ol>
+                    <li>JavaScript</li>
+                    <ul>
+                        <li>Node JS</li>
+                    </ul>
+                </ol>
+            </ul>
+
+            <hr width="100%" size="5" color="black">
+
+            <h2>This is a meter tag where the value has to be filled within the tag because we are not using JS.</h2>
+
+            <meter value="20" min="0" max="100"></meter>
+
+            <!-- Meter tag is used to show the progress of something. It is similar to the progress tag but it is more advanced and has more features. -->
+
+            <hr width="100%" size="5" color="black">
+            
+        <center>
+
+            <h2>Table</h2>
+
+                <!-- A table has been created using table tag. Inside the table we have 1 heading row with 3 headings and 3 rows with appropriate information. The table is centered using the center tag. A little bit of styling is being used to differentiate between different columns. -->
+
+            <table border="1" width = "500px" height = "150px">
+
+                <caption>Student Data</caption>
+
+                <thead>
+                    <tr bgcolor = "yellow" align="center">
+                        <th bgcolor="magenta">Course</th>
+                        <th bgcolor="grey">fees</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr bgcolor = "yellow" align="center">
+                        <td bgcolor="magenta">Web Development</td>
+                        <td bgcolor="grey">10000</td>
+                        <td>3 Months</td>
+                    </tr>
+
+                    <tr bgcolor = "yellow" align="center">
+                        <td bgcolor="magenta">Laravel</td>
+                        <td bgcolor="grey">7000</td>
+                        <td>1.5 Months</td>
+                    </tr>
+
+                    <tr bgcolor = "yellow" align="center">
+                        <td bgcolor="magenta">Full Stack Development</td>
+                        <td bgcolor="grey">15000</td>
+                        <td>6 Months</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </center>
+
+        <br>
+
+        <hr width="100%" size="5" color="black">
     </footer>
     
 </body>

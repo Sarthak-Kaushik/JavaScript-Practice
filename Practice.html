@@ -249,7 +249,7 @@
 
         <hr width="100%" size="5" color="black">
 
-            <form action="Currency_Converter.html">
+            <form action="Currency_Converter.html" target="_blank">
 
                 <input type="text" placeholder="Enter your user name">
                 <!-- input "TEXT" is used where you wnat to take input from the user. It is used to take the input from the user in the form of text. It is used in the form tag. -->
@@ -315,9 +315,56 @@
 
                 <br><br>
 
-                <textarea name="feedback" id="101" placeholder="Please give us a feedback"></textarea>
+                <textarea name="feedback" id="101" placeholder="Please give us a feedback" rows=5 cols=20 style="width: 400px; height: 100px;">
+
+                </textarea>
 
                 <!-- textarea is used to take the input from the user in the form of a paragraph. It is used to take the input from the user in the form of a paragraph. It is used in the form tag. -->
+
+                <!-- we use rows and cols for the height and width setting of the textarea. rows = Height, cols = Width. We can use style in the tag only or use CSS properties to set the height and width of the textarea. The style property takes precedence over the rows and cols property. -->
+
+                <br><br>
+
+                <label>City:
+                <!-- label is used to create a message for the user. Its main use is that the user can click on the message and the input field will be selected. It is used to make the form more interactive and user friendly. -->
+                <select name="city" id="dropdown1" style="width: 150px; height: 30px; font-weight: 900;">
+                    <option value="mumbai">Mumbai</option>
+                    <option value="bengaluru">Bengaluru</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="chennai">Chennai</option>
+                </select>
+
+                <!-- Dropdown element is created using select and options tag. Select tag is used to create a dropdown list and options tag is used to create the options in the dropdown list. -->
+
+            </label>
+
+                <br><br>
+
+                <label>
+
+                    <input type="text" name="course" list="course" autofocus>
+
+                    <!-- Autofocus is used to focus on the input field as soon as the page is loaded. List is used to create a dropdown list for the input field. -->
+
+                    <datalist id="course">  
+                        
+                        <!-- Datalist is used to create a dropdown list for the input field. It is used to create a dropdown list for the input field. Id is the same ast the id given in the list property of the input above. -->
+                        
+                        <option value="web development"></option>
+
+                        <option value="php"></option>
+
+                        <option value="python"></option>
+
+                        <option value="java"></option>
+
+                        <option value="cyber_security"></option>
+
+                    </datalist>
+
+                    <input type="submit" value="send">
+
+                </label>
 
                 <br><br>
 
@@ -326,6 +373,15 @@
             </form>
 
         <hr width="100%" size="5" color="black">
+
+        <iframe width="695" height="391" src="https://www.youtube.com/embed/eIrMbAQSU34" title="Java Tutorial for Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <hr width="100%" size="5" color="black">
+
+        <video src="video.mp4" width="695" height="391" controls loop></video>
+
+        <hr width="100%" size="5" color="black">
+
 
         <footer>
             <p>Contact me at sarthak.kaushik99@gmail.com &copy; &trade; 2018 &reg;</p>

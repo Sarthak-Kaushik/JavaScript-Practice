@@ -3,6 +3,16 @@ body {
 }
 
 h1 {
-    color: chartreuse;
-    background-color: gold;
+    color: aqua;
+    background-color: rgb(209, 190, 79);
+}
+
+p {
+    color: rgb(104, 18, 18);
+    background-color: seagreen;
+}
+
+button {
+    color: black;
+    background-color: skyblue;
 }

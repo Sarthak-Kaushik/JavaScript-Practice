@@ -13,6 +13,9 @@ p {
 }
 
 button {
-    color: black;
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    color: rgb(119, 38, 38);
     background-color: skyblue;
 }

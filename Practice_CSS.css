@@ -12,10 +12,19 @@ p {
     background-color: seagreen;
 }
 
-button {
+.btn1 , .btn2 {
     width: 100px;
-    height: 40px;
+    height: 60px;
     font-size: 18px;
     color: rgb(119, 38, 38);
     background-color: skyblue;
+    margin: 5px 0px 5px 0px;
+}
+
+.btn1:hover, .btn2:hover{
+    background-color: rgb(255, 0, 0);
+    width: 150px;
+    height: 80px;
+    color:rgb(0, 255, 0);
+    font-size: 30px;
 }

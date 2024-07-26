@@ -23,17 +23,21 @@ body {
 nav {
     background-color: #0f1111;
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    justify-content: left;
     align-items: center;
 
 }
 
 a {
     text-decoration: none;
+    margin-right: 20%;
 }
 
 .search {
     background-color: #f08804;
+    width: 60px;
 }
 
 .amazon {

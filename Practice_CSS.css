@@ -1,3 +1,10 @@
-body {
-    background-color: darkgoldenrod;
+* {
+    color: black;
+    padding: 0px;
+    margin: 0px;
 }
+
+body {
+    background-color: bisque;
+}
+

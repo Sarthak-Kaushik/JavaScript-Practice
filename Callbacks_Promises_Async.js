@@ -258,4 +258,4 @@ async function getAllData() {
 
 
 // We use Async - Await instead of chaining a Promise or callback hell in most of the scenarios in real life.
-// As in real life the code is very big and complex, Promise Chaining and Callbacks hell will make it even more complex than it needs to be.
+// In real life the code is very big and complex, Promise Chaining and Callbacks hell will make it even more complex than it needs to be.

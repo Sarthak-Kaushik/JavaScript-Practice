@@ -6,5 +6,22 @@
 
 body {
     background-color: bisque;
+    display: flex;
+    justify-content: center;
 }
 
+#box1 {
+    height: 250px;
+    width: 250px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#box2 {
+    height: 50%;
+    width: 30%;
+    background-color: aqua;
+}
